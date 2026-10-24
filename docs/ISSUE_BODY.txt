@@ -1,1 +1,4 @@
-【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/MrBean2067/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价后默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；无 Token 也能跑通全流程。同时打包为可直接安装的 WorkBuddy Skill（skill/mcd-lunch-ci/SKILL.md）。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
+【参赛申请】
+项目名称：午餐流水线 mcd-lunch-ci
+项目地址：https://github.com/MrBean2067/mcd-lunch-ci
+项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 在团队预算内求社会福利最优解，调 MCP 核价后默认只出预览、加 --confirm 才下单。输出会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；缺营养数据一律不放行，不做「0 卡」假设。零第三方依赖，无 Token 也能跑通全流程，已打包为可直接安装的 WorkBuddy Skill。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。

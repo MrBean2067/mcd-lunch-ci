@@ -34,6 +34,14 @@ class PipelineTest(unittest.TestCase):
         self.assertIn("calculate-price 核价", report)
         self.assertEqual(ctx.quote.verified, False)
 
+    def test_card_translates_regret_into_money(self):
+        """卡片是最常被转发的那张图：「差 0.22 分效用」没人看得懂，必须翻成差多少钱。"""
+        run(self.team, SnapshotProvider(), RunOptions(mode="offline", out_dir=self.out))
+        card = (self.out / "lunch-card.html").read_text(encoding="utf-8")
+        self.assertIn("他更想吃", card)
+        self.assertIn("差 ¥", card)
+        self.assertNotIn("效用", card)
+
     def test_plan_json_is_serialisable_and_consistent(self):
         run(self.team, SnapshotProvider(), RunOptions(mode="offline", out_dir=self.out))
         payload = json.loads((self.out / "plan.json").read_text(encoding="utf-8"))

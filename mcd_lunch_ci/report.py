@@ -278,11 +278,20 @@ def render_html(ctx: RunContext) -> str:
         for c in ctx.result.plans
     )
     regrets = [a for a in plan.ranked_regrets() if a.regret > 1e-9][:4]
-    regret_html = "".join(
-        f"<li><b>{esc(a.member.name)}</b> 拿到 {esc(a.combo.describe())}，"
-        f"满意度 {round(a.satisfaction * 100)}%</li>"
-        for a in regrets
-    ) or "<li>没人需要妥协，这一轮和平收场。</li>"
+    regret_items = []
+    for a in regrets:
+        # 「差 0.22 分效用」没人看得懂，卡片上更要说人话：他更想吃哪份、差多少钱
+        ideal = getattr(a, "ideal", None)
+        tail = ""
+        if ideal is not None and ideal.describe() != a.combo.describe():
+            gap = ideal.price - a.price
+            tail = (f"，他更想吃 {esc(ideal.describe())}（{esc(str(ideal.price))}），差 {esc(str(gap))}"
+                    if gap.fen > 0 else f"，他更想吃 {esc(ideal.describe())}（{esc(str(ideal.price))}）")
+        regret_items.append(
+            f"<li><b>{esc(a.member.name)}</b> 拿到 {esc(a.combo.describe())}，"
+            f"满意度 {round(a.satisfaction * 100)}%{tail}</li>"
+        )
+    regret_html = "".join(regret_items) or "<li>没人需要妥协，这一轮和平收场。</li>"
 
     return f"""<!doctype html>
 <html lang="zh-CN">
