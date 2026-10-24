@@ -19,7 +19,7 @@
 ## 30 秒上手（不需要 MCP Token）
 
 ```bash
-git clone https://github.com/<you>/mcd-lunch-ci.git
+git clone https://github.com/MrBean2067/mcd-lunch-ci.git
 cd mcd-lunch-ci
 python -m mcd_lunch_ci demo
 ```

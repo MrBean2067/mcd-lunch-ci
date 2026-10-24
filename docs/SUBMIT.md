@@ -4,34 +4,36 @@
 
 ## 一、发布前自查（5 项，逐条打勾）
 
-- [ ] `README.md` 存在，且文件名大小写完全一致
-- [ ] `CONTEST_DECLARATION.md` 存在，**内容与官方仓库原文件一字不差**（本仓库已原样放入，不要改）
-- [ ] `MCP_INTEGRATION.md` 存在
-- [ ] 源代码可运行：`python -m mcd_lunch_ci demo` 能跑出结果
-- [ ] `workbuddy.md` 存在（换 3000 WorkBuddy 积分用）
-- [ ] `skill/mcd-lunch-ci/SKILL.md` 存在（对应活动「开发 Skill」的要求，可选但强烈建议）
-- [ ] 仓库里**没有任何真实 Token**（搜一遍 `Bearer`、`MCD_MCP_TOKEN=`）
-- [ ] 仓库是 **Public**
-- [ ] 仓库创建时间在 2025-12-25 00:00 之后（新建仓库天然满足）
-- [ ] README 里的 `<you>` 占位符已替换成真实用户名
+- [x] `README.md` 存在，且文件名大小写完全一致
+- [x] `CONTEST_DECLARATION.md` 存在，**内容与官方仓库原文件一字不差**（本仓库已原样放入，不要改）
+- [x] `MCP_INTEGRATION.md` 存在
+- [x] 源代码可运行：`python -m mcd_lunch_ci demo` 能跑出结果（40 个测试全绿）
+- [x] `workbuddy.md` 存在（换 3000 WorkBuddy 积分用）
+- [x] `skill/mcd-lunch-ci/SKILL.md` 存在（对应活动「开发 Skill」的要求）
+- [x] 仓库里**没有任何真实 Token**（已扫描，Token 只在未跟踪的 `.env`）
+- [x] 仓库是 **Public**
+- [x] 仓库创建时间 2026-10-24（在 2025-12-25 之后）
+- [x] README 里的 `<you>` 占位符已替换成 `MrBean2067`
+- [x] 本地已有 2 条提交，作者为 `MrBean2067`，remote 已指向 `MrBean2067/mcd-lunch-ci`
+- [ ] **推送到 GitHub**（只剩这一步）
 
 ## 二、推到 GitHub
 
-本地仓库**已经初始化并提交好了**（`git log` 能看到一条提交，37 个文件，`.env` 已被排除）。你只需要建远程仓库然后推：
+本地仓库**已经全部就绪**：2 条提交、39 个文件、作者是 `MrBean2067`、remote 已指向 `https://github.com/MrBean2067/mcd-lunch-ci.git`、`.env` 未被跟踪、README 占位符已替换。
+
+远程仓库也已确认存在（public、空仓库、默认分支 `main`）。**只剩推送这一步**：
 
 ```bash
 cd mcd-lunch-ci
-
-# 1) 在 GitHub 网页新建一个 Public 仓库，名字建议 mcd-lunch-ci
-#    重点：不要勾选 "Add a README file"、不要加 .gitignore、不要选 license
-#    否则远程会有一条提交，push 会被拒
-
-# 2) 把下面的 <你的用户名> 换成实际用户名
-git remote add origin https://github.com/<你的用户名>/mcd-lunch-ci.git
 git push -u origin main
 ```
 
-如果 push 被拒（`rejected - fetch first`），说明建仓库时勾了初始化文件，用：
+推送时会要求凭据：
+
+- **用 Git Credential Manager**：会弹浏览器让 GitHub 授权，授权完自动存凭据（推荐，最省事）；
+- **手填**：用户名填 `MrBean2067`，密码填 **Personal Access Token**（不是账号密码，GitHub 早就禁了密码推送）。Token 在 <https://github.com/settings/tokens> 生成，勾 `repo` 即可。
+
+如果 push 被拒（`rejected - fetch first`），说明建仓库时勾了 README/gitignore，用：
 
 ```bash
 git pull --rebase origin main
@@ -39,13 +41,6 @@ git push -u origin main
 ```
 
 推完确认三件事：仓库能**匿名打开**（退出登录或用无痕窗口）、README 顶部 hero 图正常显示、`docs/hero.svg` 路径没写错。
-
-最后把 README 里两处占位符替换成你的真实仓库地址（否则首屏的 clone 命令是错的）：
-
-```bash
-# 第 22 行左右
-git clone https://github.com/<you>/mcd-lunch-ci.git
-```
 
 ## 三、发报名 Issue
 
@@ -59,7 +54,7 @@ git clone https://github.com/<you>/mcd-lunch-ci.git
 把下面这条**整段复制**，替换成你的仓库地址即可（直接一行，别按回车）：
 
 ```
-【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/<你的用户名>/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价后默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；无 Token 也能跑通全流程。同时打包为可直接安装的 WorkBuddy Skill（skill/mcd-lunch-ci/SKILL.md）。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
+【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/MrBean2067/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价后默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；无 Token 也能跑通全流程。同时打包为可直接安装的 WorkBuddy Skill（skill/mcd-lunch-ci/SKILL.md）。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
 ```
 
 Issue 标题可以写：`【参赛申请】午餐流水线 mcd-lunch-ci`
