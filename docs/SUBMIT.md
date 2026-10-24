@@ -41,30 +41,31 @@ git config --unset https.proxy
 
 提示：`socks5h` 的 `h` 表示域名也交给代理解析，写成 `socks5://` 有时会解析失败。
 
-## 三、发报名 Issue
+## 三、发报名 Issue（已提交，但正文需修正）
 
-**一键预填（推荐）**：<https://github.com/M-China/mcd-developer-innovation-challenge/issues/new?title=%E3%80%90%E5%8F%82%E8%B5%9B%E7%94%B3%E8%AF%B7%E3%80%91%E5%8D%88%E9%A4%90%E6%B5%81%E6%B0%B4%E7%BA%BF%20mcd-lunch-ci&body=%E3%80%90%E5%8F%82%E8%B5%9B%E7%94%B3%E8%AF%B7%E3%80%91%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0%EF%BC%9A%E5%8D%88%E9%A4%90%E6%B5%81%E6%B0%B4%E7%BA%BF%20mcd-lunch-ci%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80%EF%BC%9Ahttps%3A//github.com/MrBean2067/mcd-lunch-ci%E9%A1%B9%E7%9B%AE%E7%AE%80%E4%BB%8B%EF%BC%9A%E6%8A%8A%E5%9B%A2%E9%98%9F%E7%82%B9%E5%8D%88%E9%A4%90%E4%BB%8E%E7%BE%A4%E8%81%8A%E6%8B%89%E9%94%AF%E5%8F%98%E6%88%90%E4%B8%80%E6%9D%A1%207%20%E9%98%B6%E6%AE%B5%20CI%20%E6%B5%81%E6%B0%B4%E7%BA%BF%EF%BC%9A%E6%AF%8F%E4%B8%AA%E4%BA%BA%E5%86%99%E6%B8%85%E9%A2%84%E7%AE%97%E3%80%81%E5%BF%8C%E5%8F%A3%E3%80%81%E7%83%AD%E9%87%8F%E4%B8%8A%E9%99%90%EF%BC%8C%E6%B1%82%E8%A7%A3%E5%99%A8%E7%94%A8%E5%B8%95%E7%B4%AF%E6%89%98%E5%89%8D%E6%B2%BF%20%2B%20%E6%95%B4%E6%95%B0%E8%83%8C%E5%8C%85%20DP%20%E7%BB%99%E5%87%BA%E5%9C%A8%E6%80%BB%E9%A2%84%E7%AE%97%E5%86%85%E7%A4%BE%E4%BC%9A%E7%A6%8F%E5%88%A9%E6%9C%80%E4%BC%98%E7%9A%84%E6%96%B9%E6%A1%88%EF%BC%8C%E8%B0%83%20MCP%20%E6%A0%B8%E4%BB%B7%E5%90%8E%E9%BB%98%E8%AE%A4%E5%8F%AA%E5%87%BA%E9%A2%84%E8%A7%88%E3%80%81%E5%8A%A0%20--confirm%20%E6%89%8D%E4%B8%8B%E5%8D%95%E3%80%82%E6%8A%A5%E5%91%8A%E4%BC%9A%E8%AF%B4%E6%B8%85%E3%80%8C%E8%B0%81%E5%A6%A5%E5%8D%8F%E4%BA%86%E3%80%81%E5%B7%AE%E5%A4%9A%E5%B0%91%E9%92%B1%E3%80%8D%EF%BC%8C%E5%B9%B6%E7%BB%99%E5%87%BA%E9%A2%84%E7%AE%97%E2%80%94%E6%BB%A1%E6%84%8F%E5%BA%A6%E5%89%8D%E6%B2%BF%E3%80%82%E5%BF%8C%E5%8F%A3/%E7%83%AD%E9%87%8F/%E9%A2%84%E7%AE%97%E6%98%AF%E4%BB%A3%E7%A0%81%E9%87%8C%E7%9A%84%E7%A1%AC%E8%BF%87%E6%BB%A4%EF%BC%8C%E6%A8%A1%E5%9E%8B%E6%97%A0%E6%9D%83%E6%94%BE%E8%A1%8C%E8%BF%87%E6%95%8F%E5%8E%9F%EF%BC%9B%E6%97%A0%20Token%20%E4%B9%9F%E8%83%BD%E8%B7%91%E9%80%9A%E5%85%A8%E6%B5%81%E7%A8%8B%E3%80%82%E5%90%8C%E6%97%B6%E6%89%93%E5%8C%85%E4%B8%BA%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%AE%89%E8%A3%85%E7%9A%84%20WorkBuddy%20Skill%EF%BC%88skill/mcd-lunch-ci/SKILL.md%EF%BC%89%E3%80%82%E5%9F%BA%E4%BA%8E%E9%BA%A6%E5%BD%93%E5%8A%B3%20MCP%EF%BC%9Aquery-nearby-stores%E3%80%81query-meals%E3%80%81query-meal-detail%E3%80%81list-nutrition-foods%E3%80%81query-store-coupons%E3%80%81calculate-price%E3%80%81create-order%E3%80%82>
+已提交：**Issue #1286**
+<https://github.com/M-China/mcd-developer-innovation-challenge/issues/1286>
+状态：open，等待系统校验回复。
 
-点开标题和正文都已经填好，扫一眼确认仓库地址是你的，直接点 Submit 即可。
+**出过的问题（务必知道）**：一开始用了 `?title=&body=` 预填链接，URL 共 2285 字符，
+粘贴过程中被截到约 687 字符，结果 Issue 正文只提交了前 **108 个字**，
+断在「7 阶段 CI 流水线」，项目简介是半句话。长 URL 传中文正文不可靠，**以后别用**。
 
-下面是不用链接时的手动版。
+**修正步骤**：
 
-到官方仓库 <https://github.com/M-China/mcd-developer-innovation-challenge/issues> 新建 Issue。
+1. 打开上面的 Issue，右上角 **Edit**
+2. 正文整体替换为 `docs/ISSUE_BODY.txt` 的**全部内容**（就一行，453 字）
+3. 保存
 
-**格式有两个坑，官方明确提醒过：**
+**格式红线**（官方明确提醒过，违反会导致校验失败）：
 
-1. 标题和正文的标签之间**不要换行**；
-2. 项目地址**不要写成 Markdown 链接**，贴裸链接。
+1. 标签和内容之间**不要换行**——`【参赛申请】`、`项目名称：`、`项目地址：`、`项目简介：`
+   以及各自的内容，全部挤在同一行
+2. 项目地址**不要写成 Markdown 链接**，贴裸链接 `https://github.com/MrBean2067/mcd-lunch-ci`
 
-把下面这条**整段复制**，替换成你的仓库地址即可（直接一行，别按回车）：
+`docs/ISSUE_BODY.txt` 是正文的唯一来源，要改内容只改这个文件。
 
-```
-【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/MrBean2067/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价后默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；无 Token 也能跑通全流程。同时打包为可直接安装的 WorkBuddy Skill（skill/mcd-lunch-ci/SKILL.md）。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
-```
-
-Issue 标题可以写：`【参赛申请】午餐流水线 mcd-lunch-ci`
-
-提交后系统会在 Issue 下回复报名成功/失败原因。失败就按原因改完重新发。
+系统会在 Issue 下回复报名成功或失败原因。失败就按原因改完重新发。
 
 ## 四、拉 Star（这一步不做，前面都白做）
 
