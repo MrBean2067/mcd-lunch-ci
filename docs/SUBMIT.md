@@ -2,7 +2,7 @@
 
 > 截止时间：**2026-10-25 23:59**（北京时间）。定榜用 **2026-10-26 00:00** 的 Star 数。
 
-## 一、发布前自查（5 项，逐条打勾）
+## 一、发布前自查（逐条对照）
 
 - [x] `README.md` 存在，且文件名大小写完全一致
 - [x] `CONTEST_DECLARATION.md` 存在，**内容与官方仓库原文件一字不差**（本仓库已原样放入，不要改）
@@ -15,32 +15,31 @@
 - [x] 仓库创建时间 2026-10-24（在 2025-12-25 之后）
 - [x] README 里的 `<you>` 占位符已替换成 `MrBean2067`
 - [x] 本地已有 2 条提交，作者为 `MrBean2067`，remote 已指向 `MrBean2067/mcd-lunch-ci`
-- [ ] **推送到 GitHub**（只剩这一步）
+- [x] **已推送到 GitHub**（2026-10-24 21:10，3 条提交 / 39 个文件）
 
-## 二、推到 GitHub
+## 二、推到 GitHub（已完成）
 
-本地仓库**已经全部就绪**：2 条提交、39 个文件、作者是 `MrBean2067`、remote 已指向 `https://github.com/MrBean2067/mcd-lunch-ci.git`、`.env` 未被跟踪、README 占位符已替换。
+已推送成功：`main` 分支 3 条提交、39 个文件，作者 `MrBean2067`。
 
-远程仓库也已确认存在（public、空仓库、默认分支 `main`）。**只剩推送这一步**：
+**这台机器推 GitHub 会失败，原因和绕法记在这里，以后改代码还要推：**
 
-```bash
-cd mcd-lunch-ci
-git push -u origin main
-```
-
-推送时会要求凭据：
-
-- **用 Git Credential Manager**：会弹浏览器让 GitHub 授权，授权完自动存凭据（推荐，最省事）；
-- **手填**：用户名填 `MrBean2067`，密码填 **Personal Access Token**（不是账号密码，GitHub 早就禁了密码推送）。Token 在 <https://github.com/settings/tokens> 生成，勾 `repo` 即可。
-
-如果 push 被拒（`rejected - fetch first`），说明建仓库时勾了 README/gitignore，用：
+`github.com` 直连被重置（`Connection was reset` / `CONNECT tunnel failed 502`），
+但系统里装了代理，`127.0.0.1:10808` 是 **SOCKS5** 端口，走它就能通。仓库级配置已经设好：
 
 ```bash
-git pull --rebase origin main
-git push -u origin main
+git config http.proxy "socks5h://127.0.0.1:10808"
+git config https.proxy "socks5h://127.0.0.1:10808"
 ```
 
-推完确认三件事：仓库能**匿名打开**（退出登录或用无痕窗口）、README 顶部 hero 图正常显示、`docs/hero.svg` 路径没写错。
+之后 `git push` 直接可用（凭据由 Git Credential Manager 提供，已缓存）。
+如果哪天代理关了导致 push 失败，清掉配置即可：
+
+```bash
+git config --unset http.proxy
+git config --unset https.proxy
+```
+
+提示：`socks5h` 的 `h` 表示域名也交给代理解析，写成 `socks5://` 有时会解析失败。
 
 ## 三、发报名 Issue
 
