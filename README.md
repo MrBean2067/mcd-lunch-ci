@@ -69,6 +69,10 @@ python -m mcd_lunch_ci demo
 
 同时会生成三份产物：`out/lunch-report.md`（可直接贴进 GitHub 评论）、`out/lunch-card.html`（一张能转发的卡片）、`out/plan.json`（给自动化用）。
 
+卡片长这样（[`docs/lunch-card.png`](docs/lunch-card.png)，由 `lunch-card.html` 渲染，真实运行结果）：
+
+![方案卡片：¥199.40 / 人均 ¥24.92 / 满意度 84% / 谁妥协了](docs/lunch-card.png)
+
 ---
 
 ## 它解决的到底是什么问题
