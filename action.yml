@@ -1,0 +1,74 @@
+name: "午餐流水线 mcd-lunch-ci"
+description: "把「今天吃什么」变成一条 CI 流水线：约束求解 → 核价 → 确认 → 下单"
+
+branding:
+  icon: "coffee"
+  color: "red"
+
+inputs:
+  mcp-token:
+    description: "麦当劳 MCP Token；不填则自动走离线快照（结果一致，只是价格未核价）"
+    required: false
+    default: ""
+  team-file:
+    description: "团队配置文件路径"
+    required: false
+    default: "examples/team.json"
+  budget:
+    description: "覆盖团队总预算，例如 200；留空则用 team-file 里的值"
+    required: false
+    default: ""
+  out-dir:
+    description: "产物输出目录"
+    required: false
+    default: "out"
+
+outputs:
+  payable:
+    description: "券后应付总额"
+    value: ${{ steps.plan.outputs.payable }}
+  avg-satisfaction:
+    description: "平均满意度"
+    value: ${{ steps.plan.outputs.avg_satisfaction }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: 求解方案
+      id: plan
+      shell: bash
+      env:
+        MCD_MCP_TOKEN: ${{ inputs.mcp-token }}
+      run: |
+        set -euo pipefail
+
+        BUDGET_ARG=""
+        if [ -n "${{ inputs.budget }}" ]; then
+          BUDGET_ARG="--budget ${{ inputs.budget }}"
+        fi
+
+        if [ -n "${MCD_MCP_TOKEN:-}" ]; then
+          MODE="--live"
+          echo "数据源：麦当劳 MCP 实时"
+        else
+          MODE="--offline"
+          echo "未配置 MCP Token，使用离线快照（同一套求解器，价格未核价）"
+        fi
+
+        # shellcheck disable=SC2086
+        python -m mcd_lunch_ci run \
+          --team "${{ inputs.team-file }}" \
+          $MODE $BUDGET_ARG \
+          --out "${{ inputs.out-dir }}"
+
+        PAYABLE=$(python -c "import json;print(json.load(open('${{ inputs.out-dir }}/plan.json'))['quote']['payable'])")
+        SAT=$(python -c "import json;d=json.load(open('${{ inputs.out-dir }}/plan.json'));print(round(sum(m['satisfaction'] for m in d['members'])/len(d['members'])*100))")
+
+        {
+          echo "payable=$PAYABLE"
+          echo "avg_satisfaction=${SAT}%"
+        } >> "$GITHUB_OUTPUT"
+
+    - name: 写入 Job Summary
+      shell: bash
+      run: cat "${{ inputs.out-dir }}/lunch-report.md" >> "$GITHUB_STEP_SUMMARY"

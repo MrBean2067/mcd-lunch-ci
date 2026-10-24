@@ -1,0 +1,72 @@
+name: 午餐流水线
+
+# 在 Issue / PR 里回一行 /lunch，机器人把方案算出来并回帖。
+# 想真实下单，把 secrets.MCD_MCP_TOKEN 配好，并在 run 里加 --confirm（默认不开）。
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+concurrency:
+  group: lunch-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  lunch:
+    if: contains(github.event.comment.body, '/lunch')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 汇总 /lunch 指令
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api "${{ github.event.issue.comments_url }}" > comments.json
+          python -m mcd_lunch_ci tally \
+            --comments comments.json \
+            --budget 200 \
+            --out team.json
+          cat team.json
+
+      - name: 求解方案
+        id: plan
+        env:
+          MCD_MCP_TOKEN: ${{ secrets.MCD_MCP_TOKEN }}
+        run: |
+          if [ -n "${MCD_MCP_TOKEN:-}" ]; then
+            python -m mcd_lunch_ci run --team team.json --live --out out
+          else
+            python -m mcd_lunch_ci run --team team.json --offline --out out
+          fi
+
+      - name: 回帖
+        if: always() && steps.plan.outcome != 'skipped'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ -f out/lunch-report.md ]; then
+            gh issue comment ${{ github.event.issue.number }} --body-file out/lunch-report.md
+          else
+            gh issue comment ${{ github.event.issue.number }} \
+              --body "流水线在求解阶段停了。看 Actions 日志，或者检查 team.json 里的约束是否互相冲突。"
+          fi
+
+      - name: 保存产物
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lunch-${{ github.event.issue.number }}
+          path: |
+            out/
+            team.json
+          if-no-files-found: ignore

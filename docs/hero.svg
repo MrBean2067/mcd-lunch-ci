@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="午餐流水线：七阶段执行流程与推荐方案卡片">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff9ee"/>
+      <stop offset="55%" stop-color="#fdf3e2"/>
+      <stop offset="100%" stop-color="#fbeadb"/>
+    </linearGradient>
+    <linearGradient id="yellowband" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffe08a"/>
+      <stop offset="100%" stop-color="#ffcf4d"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFC72C"/>
+      <stop offset="100%" stop-color="#DA291C"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#8a5417" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="560" rx="26" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="10" fill="url(#yellowband)"/>
+
+  <!-- 左侧：流水线 -->
+  <g font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif">
+    <text x="56" y="74" font-size="15" letter-spacing="2.6" fill="#8a5a00" font-weight="700">M-CODE 1024 · MCD-LUNCH-CI</text>
+    <text x="56" y="118" font-size="38" font-weight="800" fill="#191310">把「今天吃什么」变成</text>
+    <text x="56" y="166" font-size="38" font-weight="800" fill="#DA291C">一条七阶段流水线</text>
+
+    <g font-size="15">
+      <!-- 阶段行 -->
+      <g>
+        <circle cx="70" cy="214" r="6" fill="#23a26d"/>
+        <text x="92" y="219" fill="#191310" font-weight="700" font-family="Consolas, monospace">intake</text>
+        <text x="196" y="219" fill="#6b6259">读取名单 · 8 人 · 预算 ¥200.00</text>
+      </g>
+      <g>
+        <circle cx="70" cy="252" r="6" fill="#23a26d"/>
+        <text x="92" y="257" fill="#191310" font-weight="700" font-family="Consolas, monospace">lint</text>
+        <text x="196" y="257" fill="#6b6259">硬约束预检 · 忌口 / 预算 / 热量</text>
+      </g>
+      <g>
+        <circle cx="70" cy="290" r="6" fill="#23a26d"/>
+        <text x="92" y="295" fill="#191310" font-weight="700" font-family="Consolas, monospace">menu</text>
+        <text x="196" y="295" fill="#6b6259">拉取菜单 · 35 个餐品 · 3 张券</text>
+      </g>
+      <g>
+        <circle cx="70" cy="328" r="6" fill="#23a26d"/>
+        <text x="92" y="333" fill="#191310" font-weight="700" font-family="Consolas, monospace">solve</text>
+        <text x="196" y="333" fill="#6b6259">帕累托前沿 + 整数背包 DP</text>
+      </g>
+      <g>
+        <circle cx="70" cy="366" r="6" fill="#d99a00"/>
+        <text x="92" y="371" fill="#191310" font-weight="700" font-family="Consolas, monospace">quote</text>
+        <text x="196" y="371" fill="#6b6259">calculate-price 核价 · 券前 ¥200.00</text>
+      </g>
+      <g>
+        <circle cx="70" cy="404" r="6" fill="#b9b1a6"/>
+        <text x="92" y="409" fill="#191310" font-weight="700" font-family="Consolas, monospace">approve</text>
+        <text x="196" y="409" fill="#6b6259">人工确认 · 默认只出预览</text>
+      </g>
+      <g>
+        <circle cx="70" cy="442" r="6" fill="#b9b1a6"/>
+        <text x="92" y="447" fill="#191310" font-weight="700" font-family="Consolas, monospace">deploy</text>
+        <text x="196" y="447" fill="#6b6259">下单 · 付款仍然由人来扫码</text>
+      </g>
+    </g>
+
+    <text x="56" y="504" font-size="14" fill="#8a7a66">零 Token 跑通全流程 · 25 个单元测试 · 零第三方依赖</text>
+  </g>
+
+  <!-- 右侧：方案卡片 -->
+  <g filter="url(#soft)">
+    <rect x="686" y="56" width="462" height="452" rx="20" fill="#fffdf8" stroke="#eadfd2"/>
+  </g>
+  <g font-family="PingFang SC, Microsoft YaHei, system-ui, sans-serif">
+    <rect x="686" y="56" width="462" height="66" rx="20" fill="#fff3cd"/>
+    <rect x="686" y="102" width="462" height="20" fill="#fff3cd"/>
+    <text x="714" y="86" font-size="13" letter-spacing="2" fill="#8a5a00" font-weight="700">推荐方案 · 决定已就绪</text>
+    <text x="714" y="110" fill="#6b4a00" font-size="13">8 人 · 示例门店 · 用时 53ms</text>
+
+    <text x="714" y="168" font-size="40" font-weight="800" fill="#DA291C">¥185.00</text>
+    <text x="714" y="194" font-size="13" fill="#6b6259">应付（已用「满 ¥99 减 ¥15」）</text>
+    <text x="960" y="168" font-size="24" font-weight="800" fill="#191310">81%</text>
+    <text x="960" y="190" font-size="12" fill="#6b6259">平均满意度</text>
+    <text x="1076" y="168" font-size="24" font-weight="800" fill="#191310">¥23.12</text>
+    <text x="1076" y="190" font-size="12" fill="#6b6259">人均</text>
+
+    <line x1="714" y1="212" x2="1120" y2="212" stroke="#eadfd2"/>
+
+    <g font-size="14">
+      <text x="714" y="240" fill="#6b6259" font-size="11" letter-spacing="1.6">成员</text>
+      <text x="820" y="240" fill="#6b6259" font-size="11" letter-spacing="1.6">组合</text>
+      <text x="1064" y="240" fill="#6b6259" font-size="11" letter-spacing="1.6" text-anchor="end">价格</text>
+      <text x="1120" y="240" fill="#6b6259" font-size="11" letter-spacing="1.6" text-anchor="end">满意</text>
+
+      <text x="714" y="270" fill="#191310" font-weight="700">阿岚</text>
+      <text x="820" y="270" fill="#3a332c">吉士汉堡 + 中杯可乐</text>
+      <text x="1064" y="270" fill="#191310" text-anchor="end">¥22.50</text>
+      <text x="1120" y="270" fill="#191310" text-anchor="end">70%</text>
+
+      <text x="714" y="298" fill="#191310" font-weight="700">大熊</text>
+      <text x="820" y="298" fill="#3a332c">吉士汉堡 + 中薯条 + 纯牛奶</text>
+      <text x="1064" y="298" fill="#191310" text-anchor="end">¥31.50</text>
+      <text x="1120" y="298" fill="#191310" text-anchor="end">93%</text>
+
+      <text x="714" y="326" fill="#191310" font-weight="700">Momo</text>
+      <text x="820" y="326" fill="#3a332c">麦香鸡 + 中杯可乐</text>
+      <text x="1064" y="326" fill="#191310" text-anchor="end">¥26.50</text>
+      <text x="1120" y="326" fill="#191310" text-anchor="end">100%</text>
+
+      <text x="714" y="354" fill="#191310" font-weight="700">Kevin</text>
+      <text x="820" y="354" fill="#3a332c">吉士汉堡 + 纯牛奶</text>
+      <text x="1064" y="354" fill="#191310" text-anchor="end">¥20.00</text>
+      <text x="1120" y="354" fill="#191310" text-anchor="end">53%</text>
+    </g>
+    <text x="714" y="378" font-size="12" fill="#8a7a66">… 另外 4 人已分配，见完整报告</text>
+
+    <line x1="714" y1="398" x2="1120" y2="398" stroke="#eadfd2"/>
+
+    <text x="714" y="424" font-size="12" fill="#6b6259" font-weight="700">预算—满意度前沿</text>
+    <rect x="714" y="436" width="406" height="8" rx="4" fill="#f2e8d8"/>
+    <rect x="714" y="436" width="329" height="8" rx="4" fill="url(#bar)"/>
+    <rect x="714" y="452" width="406" height="8" rx="4" fill="#f2e8d8"/>
+    <rect x="714" y="452" width="260" height="8" rx="4" fill="url(#bar)" opacity="0.72"/>
+    <rect x="714" y="468" width="406" height="8" rx="4" fill="#f2e8d8"/>
+    <rect x="714" y="468" width="110" height="8" rx="4" fill="url(#bar)" opacity="0.45"/>
+    <g font-size="11" fill="#6b6259">
+      <text x="1120" y="424" text-anchor="end">¥200 → 81%</text>
+      <text x="1120" y="446" text-anchor="end">¥170 → 64%</text>
+      <text x="1120" y="462" text-anchor="end">¥140 → 27%</text>
+      <text x="1120" y="478" text-anchor="end"> </text>
+    </g>
+    <text x="714" y="496" font-size="11" fill="#b0a292">省钱不是免费的：这条曲线告诉你代价落在谁头上</text>
+  </g>
+</svg>

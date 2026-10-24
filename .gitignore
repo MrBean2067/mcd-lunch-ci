@@ -1,0 +1,23 @@
+# 产物与本地数据
+out/
+*.log
+
+# 密钥：绝不提交
+.env
+.env.local
+*.token
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

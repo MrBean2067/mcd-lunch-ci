@@ -1,0 +1,1205 @@
+{
+  "_meta": {
+    "source": "live-mcp-sync",
+    "provider": "python -m mcd_lunch_ci sync",
+    "mirrorsTool": "query-meals + query-meal-detail + calculate-price + list-nutrition-foods",
+    "capturedAt": "2026-10-24 19:07:37",
+    "nutritionFile": "live_nutrition_snapshot.json",
+    "store": {
+      "storeId": "1420762",
+      "storeName": "麦当劳深圳同方信息港餐厅",
+      "address": "科技园北区朗山路11号同方信息港E栋G层5号商铺",
+      "distanceM": 403,
+      "beType": 1,
+      "orderType": 1
+    },
+    "notice": "真实 MCP 同步而来的菜单快照：名称与价格来自 query-meals + query-meal-detail + calculate-price（金额单位：分），营养来自 list-nutrition-foods（按餐品名匹配）。价格随门店与时段变化，正式下单前请用 --live 实时核价。",
+    "nutritionCoverage": "57/102 个餐品有实测营养"
+  },
+  "products": [
+    {
+      "productCode": "9900016077",
+      "productName": "蘸酱炸鸡",
+      "category": "burger",
+      "priceYuan": 11.9,
+      "tags": [
+        "chicken",
+        "fried"
+      ],
+      "popularity": 0.946,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900015568",
+      "productName": "精选超值随心配",
+      "category": "burger",
+      "priceYuan": 13.9,
+      "tags": [],
+      "popularity": 0.644,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900013304",
+      "productName": "人气经典随心配",
+      "category": "burger",
+      "priceYuan": 14.9,
+      "tags": [],
+      "popularity": 0.646,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900008747",
+      "productName": "牛肉堡单品精选",
+      "category": "burger",
+      "priceYuan": 15.0,
+      "tags": [
+        "beef",
+        "gluten"
+      ],
+      "popularity": 0.598,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1450",
+      "productName": "麦香鸡",
+      "category": "burger",
+      "priceYuan": 17.0,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.606,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "521731",
+      "productName": "枫糖风味厚松饼猪柳堡",
+      "category": "burger",
+      "priceYuan": 18.0,
+      "tags": [
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.664,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900011126",
+      "productName": "酥脆无双套餐",
+      "category": "burger",
+      "priceYuan": 20.0,
+      "tags": [],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521730",
+      "productName": "枫糖风味厚松饼猪柳蛋堡",
+      "category": "burger",
+      "priceYuan": 22.0,
+      "tags": [
+        "egg",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.666,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1440",
+      "productName": "麦辣鸡腿汉堡",
+      "category": "burger",
+      "priceYuan": 22.5,
+      "tags": [
+        "chicken",
+        "gluten",
+        "salty",
+        "spicy"
+      ],
+      "popularity": 0.61,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "1600",
+      "productName": "麦香鱼",
+      "category": "burger",
+      "priceYuan": 22.5,
+      "tags": [
+        "fish"
+      ],
+      "popularity": 0.558,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "521316",
+      "productName": "高达吉士双牛堡",
+      "category": "burger",
+      "priceYuan": 22.5,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900015602",
+      "productName": "大堡口福三件套",
+      "category": "burger",
+      "priceYuan": 22.9,
+      "tags": [
+        "gluten"
+      ],
+      "popularity": 0.642,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1120",
+      "productName": "双层吉士汉堡",
+      "category": "burger",
+      "priceYuan": 23.0,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.552,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "1406",
+      "productName": "板烧鸡腿堡",
+      "category": "burger",
+      "priceYuan": 23.5,
+      "tags": [
+        "chicken",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.608,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900008746",
+      "productName": "鸡肉堡单品精选",
+      "category": "burger",
+      "priceYuan": 23.5,
+      "tags": [
+        "chicken",
+        "gluten"
+      ],
+      "popularity": 0.654,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900014974",
+      "productName": "枫糖风味厚松饼猪柳堡三件套",
+      "category": "burger",
+      "priceYuan": 23.9,
+      "tags": [
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.778,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900003586",
+      "productName": "双层深海鳕鱼堡",
+      "category": "burger",
+      "priceYuan": 24.0,
+      "tags": [
+        "fish",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.61,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900011123",
+      "productName": "“辣”么快乐套餐",
+      "category": "burger",
+      "priceYuan": 24.0,
+      "tags": [
+        "spicy"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1106",
+      "productName": "培根蔬萃双层牛堡",
+      "category": "burger",
+      "priceYuan": 24.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.554,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900004835",
+      "productName": "麦乐鸡经典中套餐",
+      "category": "burger",
+      "priceYuan": 25.0,
+      "tags": [
+        "chicken",
+        "fried"
+      ],
+      "popularity": 0.582,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1100",
+      "productName": "巨无霸",
+      "category": "burger",
+      "priceYuan": 25.5,
+      "tags": [
+        "beef",
+        "salty"
+      ],
+      "popularity": 0.562,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900005449",
+      "productName": "吉士汉堡包中套餐",
+      "category": "burger",
+      "priceYuan": 26.0,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten"
+      ],
+      "popularity": 0.618,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "4648",
+      "productName": "不素之霸双层牛堡",
+      "category": "burger",
+      "priceYuan": 26.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.556,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900014838",
+      "productName": "枫糖风味厚松饼猪柳蛋堡三件套",
+      "category": "burger",
+      "priceYuan": 27.9,
+      "tags": [
+        "egg",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.99,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005453",
+      "productName": "麦香鸡中套餐",
+      "category": "burger",
+      "priceYuan": 28.0,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.662,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "511782",
+      "productName": "芝士安格斯厚牛堡",
+      "category": "burger",
+      "priceYuan": 31.5,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.536,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900005456",
+      "productName": "麦辣鸡腿汉堡三件套",
+      "category": "burger",
+      "priceYuan": 33.5,
+      "tags": [
+        "chicken",
+        "gluten",
+        "salty",
+        "spicy"
+      ],
+      "popularity": 0.664,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005460",
+      "productName": "麦香鱼中套餐",
+      "category": "burger",
+      "priceYuan": 33.5,
+      "tags": [
+        "fish"
+      ],
+      "popularity": 0.622,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005464",
+      "productName": "双层吉士汉堡中套餐",
+      "category": "burger",
+      "priceYuan": 34.0,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.62,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900004064",
+      "productName": "精选单人餐三件套",
+      "category": "burger",
+      "priceYuan": 34.5,
+      "tags": [],
+      "popularity": 0.99,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005462",
+      "productName": "板烧鸡腿堡三件套",
+      "category": "burger",
+      "priceYuan": 34.5,
+      "tags": [
+        "chicken",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.666,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "511781",
+      "productName": "培根安格斯厚牛堡",
+      "category": "burger",
+      "priceYuan": 34.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork",
+        "salty"
+      ],
+      "popularity": 0.538,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900005413",
+      "productName": "双层深海鳕鱼堡三件套",
+      "category": "burger",
+      "priceYuan": 35.0,
+      "tags": [
+        "fish",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.624,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900009245",
+      "productName": "牛气满满套餐",
+      "category": "burger",
+      "priceYuan": 35.0,
+      "tags": [
+        "beef"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005468",
+      "productName": "培根蔬萃双层牛堡三件套",
+      "category": "burger",
+      "priceYuan": 35.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.626,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900011121",
+      "productName": "“苹”水相“鱼”套餐",
+      "category": "burger",
+      "priceYuan": 36.0,
+      "tags": [
+        "fish"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005466",
+      "productName": "巨无霸三件套",
+      "category": "burger",
+      "priceYuan": 36.5,
+      "tags": [
+        "beef",
+        "salty"
+      ],
+      "popularity": 0.628,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005411",
+      "productName": "不素之霸双层牛堡三件套",
+      "category": "burger",
+      "priceYuan": 37.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.63,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900009242",
+      "productName": "“苹板”支撑Pro套餐",
+      "category": "burger",
+      "priceYuan": 39.5,
+      "tags": [
+        "salty"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005430",
+      "productName": "芝士安格斯厚牛堡三件套",
+      "category": "burger",
+      "priceYuan": 42.5,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.59,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900005428",
+      "productName": "培根安格斯厚牛堡三件套",
+      "category": "burger",
+      "priceYuan": 45.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork",
+        "salty"
+      ],
+      "popularity": 0.592,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900016301",
+      "productName": "枫糖风味厚松饼猪柳蛋堡四件套",
+      "category": "burger",
+      "priceYuan": 52.0,
+      "tags": [
+        "egg",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.64,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900004236",
+      "productName": "人气超值四件套随心选",
+      "category": "burger",
+      "priceYuan": 57.0,
+      "tags": [],
+      "popularity": 0.676,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900000891",
+      "productName": "麦辣鸡腿堡四件套",
+      "category": "burger",
+      "priceYuan": 57.0,
+      "tags": [
+        "chicken",
+        "gluten",
+        "spicy"
+      ],
+      "popularity": 0.67,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900000890",
+      "productName": "板烧鸡腿堡四件套",
+      "category": "burger",
+      "priceYuan": 57.0,
+      "tags": [
+        "chicken",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.668,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900010110",
+      "productName": "鱼牛汉堡四件套随心选",
+      "category": "burger",
+      "priceYuan": 58.5,
+      "tags": [
+        "beef",
+        "fish",
+        "gluten"
+      ],
+      "popularity": 0.674,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900000888",
+      "productName": "巨无霸四件套",
+      "category": "burger",
+      "priceYuan": 58.5,
+      "tags": [
+        "beef",
+        "salty"
+      ],
+      "popularity": 0.638,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900000886",
+      "productName": "不素之霸双层牛堡四件套",
+      "category": "burger",
+      "priceYuan": 58.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.636,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900000885",
+      "productName": "培根蔬萃双层牛堡四件套",
+      "category": "burger",
+      "priceYuan": 58.5,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork"
+      ],
+      "popularity": 0.634,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900000893",
+      "productName": "双层深海鳕鱼堡四件套",
+      "category": "burger",
+      "priceYuan": 58.5,
+      "tags": [
+        "fish",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.632,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900006957",
+      "productName": "安格斯厚牛堡四件套随心选",
+      "category": "burger",
+      "priceYuan": 66.0,
+      "tags": [
+        "beef",
+        "gluten"
+      ],
+      "popularity": 0.672,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900000881",
+      "productName": "培根安格斯厚牛堡四件套",
+      "category": "burger",
+      "priceYuan": 66.0,
+      "tags": [
+        "beef",
+        "gluten",
+        "pork",
+        "salty"
+      ],
+      "popularity": 0.596,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900000882",
+      "productName": "芝士安格斯厚牛堡四件套",
+      "category": "burger",
+      "priceYuan": 66.0,
+      "tags": [
+        "beef",
+        "dairy",
+        "gluten",
+        "salty"
+      ],
+      "popularity": 0.594,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900004066",
+      "productName": "堡堡随心拼（7件任选）",
+      "category": "burger",
+      "priceYuan": 72.5,
+      "tags": [
+        "gluten"
+      ],
+      "popularity": 0.682,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "515837",
+      "productName": "圆筒冰淇淋",
+      "category": "dessert",
+      "priceYuan": 5.0,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900008752",
+      "productName": "派",
+      "category": "dessert",
+      "priceYuan": 8.5,
+      "tags": [
+        "gluten"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "521922",
+      "productName": "奶香大米派",
+      "category": "dessert",
+      "priceYuan": 9.5,
+      "tags": [
+        "dairy",
+        "gluten"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900008745",
+      "productName": "新地",
+      "category": "dessert",
+      "priceYuan": 12.0,
+      "tags": [
+        "dairy",
+        "sugar"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900008754",
+      "productName": "经典麦旋风",
+      "category": "dessert",
+      "priceYuan": 15.5,
+      "tags": [
+        "dairy",
+        "sugar"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521950",
+      "productName": "蓝莓爆爆珠麦旋风",
+      "category": "dessert",
+      "priceYuan": 16.5,
+      "tags": [
+        "dairy",
+        "sugar"
+      ],
+      "popularity": 0.888,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "520689",
+      "productName": "小杯鲜萃咖啡",
+      "category": "drink",
+      "priceYuan": 9.5,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900008751",
+      "productName": "可乐",
+      "category": "drink",
+      "priceYuan": 9.5,
+      "tags": [
+        "caffeine",
+        "sugar"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "3010",
+      "productName": "雪碧（小杯）",
+      "category": "drink",
+      "priceYuan": 9.5,
+      "tags": [
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "515280",
+      "productName": "阳光柠檬红茶小杯",
+      "category": "drink",
+      "priceYuan": 9.5,
+      "tags": [
+        "caffeine",
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900015561",
+      "productName": "麦咖啡冰爽一夏",
+      "category": "drink",
+      "priceYuan": 9.9,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521717",
+      "productName": "椰奶雪冰",
+      "category": "drink",
+      "priceYuan": 9.9,
+      "tags": [
+        "dairy",
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "3755",
+      "productName": "纯牛奶(盒装)",
+      "category": "drink",
+      "priceYuan": 10.5,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "515520",
+      "productName": "中杯怡泉+C",
+      "category": "drink",
+      "priceYuan": 11.5,
+      "tags": [
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "6362",
+      "productName": "100% 苹果汁(盒装)",
+      "category": "drink",
+      "priceYuan": 11.5,
+      "tags": [
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "3505",
+      "productName": "锡兰红茶",
+      "category": "drink",
+      "priceYuan": 11.5,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "507411",
+      "productName": "麦咖啡™冰美式中杯",
+      "category": "drink",
+      "priceYuan": 11.9,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "2430",
+      "productName": "【美汁源】“黄金橙橙”",
+      "category": "drink",
+      "priceYuan": 13.0,
+      "tags": [
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "6352",
+      "productName": "阳光橙麦炫酷",
+      "category": "drink",
+      "priceYuan": 13.0,
+      "tags": [
+        "sugar"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "507409",
+      "productName": "麦咖啡™冰奶铁中杯",
+      "category": "drink",
+      "priceYuan": 13.9,
+      "tags": [
+        "caffeine",
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "514851",
+      "productName": "咖啡阿芙佳朵",
+      "category": "drink",
+      "priceYuan": 15.0,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "507394",
+      "productName": "热牛奶中杯",
+      "category": "drink",
+      "priceYuan": 19.0,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "507387",
+      "productName": "卡布奇诺中杯",
+      "category": "drink",
+      "priceYuan": 21.0,
+      "tags": [
+        "caffeine"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "510488",
+      "productName": "热燕麦奶中杯",
+      "category": "drink",
+      "priceYuan": 21.0,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "510479",
+      "productName": "冰燕麦奶铁中杯",
+      "category": "drink",
+      "priceYuan": 23.0,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900005421",
+      "productName": "鱼排堡开心乐园餐",
+      "category": "kids",
+      "priceYuan": 24.0,
+      "tags": [
+        "fish",
+        "gluten"
+      ],
+      "popularity": 0.57,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005423",
+      "productName": "麦乐鸡开心乐园餐",
+      "category": "kids",
+      "priceYuan": 25.0,
+      "tags": [
+        "chicken",
+        "fried"
+      ],
+      "popularity": 0.568,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005439",
+      "productName": "开心亲子双人餐",
+      "category": "kids",
+      "priceYuan": 59.5,
+      "tags": [],
+      "popularity": 0.562,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "6102",
+      "productName": "苹果片",
+      "category": "side",
+      "priceYuan": 7.0,
+      "tags": [],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "521741",
+      "productName": "脆薯饼",
+      "category": "side",
+      "priceYuan": 8.5,
+      "tags": [],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900016566",
+      "productName": "心形薯饼8块",
+      "category": "side",
+      "priceYuan": 9.9,
+      "tags": [],
+      "popularity": 0.942,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521986",
+      "productName": "马苏里拉拉丝芝士条",
+      "category": "side",
+      "priceYuan": 11.0,
+      "tags": [
+        "dairy"
+      ],
+      "popularity": 0.502,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900016078",
+      "productName": "蘸酱麦麦脆汁鸡",
+      "category": "side",
+      "priceYuan": 11.9,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.652,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "4437",
+      "productName": "小杯玉米杯",
+      "category": "side",
+      "priceYuan": 13.0,
+      "tags": [],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "4810",
+      "productName": "中薯条",
+      "category": "side",
+      "priceYuan": 13.5,
+      "tags": [
+        "fried",
+        "gluten"
+      ],
+      "popularity": 0.5,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "1401",
+      "productName": "麦乐鸡5块",
+      "category": "side",
+      "priceYuan": 14.0,
+      "tags": [
+        "chicken",
+        "fried"
+      ],
+      "popularity": 0.526,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "521156",
+      "productName": "那么大鸡排（椒盐风味）",
+      "category": "side",
+      "priceYuan": 14.0,
+      "tags": [
+        "chicken",
+        "fried",
+        "salty",
+        "spicy"
+      ],
+      "popularity": 0.524,
+      "nutritionSource": "measured-fuzzy"
+    },
+    {
+      "productCode": "9900016082",
+      "productName": "心形薯饼5块",
+      "category": "side",
+      "priceYuan": 14.5,
+      "tags": [],
+      "popularity": 0.55,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "1700",
+      "productName": "麦辣鸡翅2块",
+      "category": "side",
+      "priceYuan": 15.0,
+      "tags": [
+        "chicken",
+        "fried",
+        "spicy"
+      ],
+      "popularity": 0.53,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005432",
+      "productName": "麦麦脆汁鸡1块",
+      "category": "side",
+      "priceYuan": 15.0,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.572,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521901",
+      "productName": "月下相思扭扭薯",
+      "category": "side",
+      "priceYuan": 15.0,
+      "tags": [],
+      "popularity": 0.5,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "521881",
+      "productName": "马来咖喱风味薄皮肉骨鸡3块",
+      "category": "side",
+      "priceYuan": 15.5,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.534,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900016076",
+      "productName": "“我就喜欢”鸡薯双全盒",
+      "category": "side",
+      "priceYuan": 15.9,
+      "tags": [
+        "chicken"
+      ],
+      "popularity": 0.948,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "520445",
+      "productName": "薄皮焦香V翅",
+      "category": "side",
+      "priceYuan": 16.0,
+      "tags": [],
+      "popularity": 0.528,
+      "nutritionSource": "measured"
+    },
+    {
+      "productCode": "9900015730",
+      "productName": "BFF四宫格小食盘",
+      "category": "side",
+      "priceYuan": 39.8,
+      "tags": [],
+      "popularity": 0.684,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900015729",
+      "productName": "蘸酱BFF四宫格小食盘",
+      "category": "side",
+      "priceYuan": 42.8,
+      "tags": [],
+      "popularity": 0.65,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900006332",
+      "productName": "薄皮V翅双拼十翅",
+      "category": "side",
+      "priceYuan": 49.9,
+      "tags": [],
+      "popularity": 0.686,
+      "nutritionSource": "unavailable"
+    },
+    {
+      "productCode": "9900005321",
+      "productName": "BFF四宫格小食盘双人餐",
+      "category": "side",
+      "priceYuan": 122.5,
+      "tags": [],
+      "popularity": 0.68,
+      "nutritionSource": "unavailable"
+    }
+  ],
+  "coupons": []
+}

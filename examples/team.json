@@ -1,0 +1,98 @@
+{
+  "budgetYuan": 200,
+  "store": {
+    "storeId": "DEMO-0001",
+    "storeName": "示例门店·离线快照"
+  },
+  "_readme": "8 人团队示例：每个人只写自己的约束（预算、忌口、热量目标、口味偏好），求解器负责把冲突谈成一份方案。",
+  "members": [
+    {
+      "name": "阿岚",
+      "budgetYuan": 30,
+      "avoid": ["pork"],
+      "maxKcal": null,
+      "targetKcal": 800,
+      "likes": {"caffeine": 0.3},
+      "dislikes": {},
+      "recent": [],
+      "note": "不吃猪肉"
+    },
+    {
+      "name": "大熊",
+      "budgetYuan": 35,
+      "avoid": ["spicy"],
+      "maxKcal": null,
+      "targetKcal": 950,
+      "likes": {"beef": 0.35},
+      "dislikes": {},
+      "recent": [],
+      "note": "一点辣都不行，但饿"
+    },
+    {
+      "name": "Momo",
+      "budgetYuan": 28,
+      "avoid": ["dairy"],
+      "maxKcal": null,
+      "targetKcal": 700,
+      "likes": {},
+      "dislikes": {},
+      "recent": [],
+      "note": "乳糖不耐"
+    },
+    {
+      "name": "Kevin",
+      "budgetYuan": 30,
+      "avoid": ["fried"],
+      "maxKcal": 600,
+      "targetKcal": 550,
+      "likes": {},
+      "dislikes": {},
+      "recent": [],
+      "note": "减脂期，热量是硬线"
+    },
+    {
+      "name": "小满",
+      "budgetYuan": 26,
+      "avoid": ["beef", "fish"],
+      "maxKcal": null,
+      "targetKcal": 750,
+      "likes": {},
+      "dislikes": {"spicy": 0.3},
+      "recent": [],
+      "note": "不吃牛羊鱼，怕辣"
+    },
+    {
+      "name": "阿哲",
+      "budgetYuan": 24,
+      "avoid": [],
+      "maxKcal": null,
+      "targetKcal": 850,
+      "likes": {"spicy": 0.5, "chicken": 0.3},
+      "dislikes": {},
+      "recent": ["麦辣鸡腿堡"],
+      "note": "穷，且昨天刚吃过麦辣鸡腿堡"
+    },
+    {
+      "name": "老周",
+      "budgetYuan": 45,
+      "avoid": [],
+      "maxKcal": null,
+      "targetKcal": 1100,
+      "likes": {"beef": 0.3},
+      "dislikes": {},
+      "recent": [],
+      "note": "干饭王"
+    },
+    {
+      "name": "Yuki",
+      "budgetYuan": 32,
+      "avoid": ["fried"],
+      "maxKcal": null,
+      "targetKcal": 650,
+      "likes": {},
+      "dislikes": {"beef": 0.2},
+      "recent": [],
+      "note": "不吃油炸"
+    }
+  ]
+}

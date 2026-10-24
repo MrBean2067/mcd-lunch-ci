@@ -1,0 +1,61 @@
+{
+  "_meta": {
+    "source": "offline-snapshot",
+    "provider": "mcd-lunch-ci/data/menu_snapshot.json",
+    "mirrorsTool": "query-meals",
+    "capturedAt": "2026-10-24",
+    "notice": "离线快照：价格与供应为公开菜单常见值整理，仅用于无 Token 环境下的流程演示。真实点餐请以 query-meals / calculate-price 的实时返回为准。",
+    "store": {
+      "storeId": "DEMO-0001",
+      "storeName": "示例门店·离线快照",
+      "cityName": "示例城市",
+      "beType": 1
+    }
+  },
+  "products": [
+    {"productCode": "BIGMAC",        "productName": "巨无霸",              "category": "burger",    "priceYuan": 25.5, "tags": ["beef", "gluten", "dairy"],            "popularity": 0.95},
+    {"productCode": "MCSPICY",       "productName": "麦辣鸡腿堡",          "category": "burger",    "priceYuan": 22.5, "tags": ["chicken", "spicy", "fried", "gluten"], "popularity": 0.95},
+    {"productCode": "GRILL",         "productName": "板烧鸡腿堡",          "category": "burger",    "priceYuan": 23.5, "tags": ["chicken", "gluten"],                  "popularity": 0.80},
+    {"productCode": "MCHICKEN",      "productName": "麦香鸡",              "category": "burger",    "priceYuan": 17.0, "tags": ["chicken", "fried", "gluten"],         "popularity": 0.55},
+    {"productCode": "MCFILLET",      "productName": "麦香鱼",              "category": "burger",    "priceYuan": 17.0, "tags": ["fish", "fried", "gluten", "dairy"],   "popularity": 0.60},
+    {"productCode": "DBLCHEESE",     "productName": "双层吉士汉堡",        "category": "burger",    "priceYuan": 20.0, "tags": ["beef", "gluten", "dairy"],            "popularity": 0.60},
+    {"productCode": "CHEESE",        "productName": "吉士汉堡",            "category": "burger",    "priceYuan": 13.0, "tags": ["beef", "gluten", "dairy"],            "popularity": 0.50},
+    {"productCode": "TERIYAKI",      "productName": "照烧鸡腿堡",          "category": "burger",    "priceYuan": 22.0, "tags": ["chicken", "gluten", "soy"],           "popularity": 0.50},
+    {"productCode": "ANGUS",         "productName": "安格斯厚牛堡",        "category": "burger",    "priceYuan": 33.0, "tags": ["beef", "gluten", "dairy"],            "popularity": 0.45},
+    {"productCode": "SPICYDBL",      "productName": "双层麦辣鸡腿堡",      "category": "burger",    "priceYuan": 27.0, "tags": ["chicken", "spicy", "fried", "gluten"], "popularity": 0.50},
+    {"productCode": "BIGCHICKEN",    "productName": "那么大鸡排",          "category": "side",      "priceYuan": 21.0, "tags": ["chicken", "spicy", "fried", "gluten"], "popularity": 0.60},
+    {"productCode": "FRIES_M",       "productName": "中薯条",              "category": "side",      "priceYuan": 11.5, "tags": ["veg", "fried", "salty"],              "popularity": 0.90},
+    {"productCode": "FRIES_L",       "productName": "大薯条",              "category": "side",      "priceYuan": 14.5, "tags": ["veg", "fried", "salty"],              "popularity": 0.70},
+    {"productCode": "NUGGETS_5",     "productName": "麦乐鸡（5块）",       "category": "side",      "priceYuan": 12.5, "tags": ["chicken", "fried", "gluten"],         "popularity": 0.75},
+    {"productCode": "NUGGETS_10",    "productName": "麦乐鸡（10块）",      "category": "side",      "priceYuan": 21.0, "tags": ["chicken", "fried", "gluten"],         "popularity": 0.40},
+    {"productCode": "WINGS",         "productName": "麦辣鸡翅（2块）",     "category": "side",      "priceYuan": 13.5, "tags": ["chicken", "spicy", "fried", "gluten"], "popularity": 0.70},
+    {"productCode": "CORN",          "productName": "玉米杯",              "category": "side",      "priceYuan": 7.5,  "tags": ["veg"],                                "popularity": 0.35},
+    {"productCode": "APPLE",         "productName": "苹果片",              "category": "side",      "priceYuan": 6.0,  "tags": ["veg"],                                "popularity": 0.25},
+    {"productCode": "SALAD",         "productName": "鲜蔬杯",              "category": "side",      "priceYuan": 8.0,  "tags": ["veg"],                                "popularity": 0.20},
+    {"productCode": "COKE_M",        "productName": "中杯可乐",            "category": "drink",     "priceYuan": 9.5,  "tags": ["caffeine", "sugar"],                  "popularity": 0.90},
+    {"productCode": "COKE_ZERO_M",   "productName": "中杯无糖可乐",        "category": "drink",     "priceYuan": 9.5,  "tags": ["caffeine"],                           "popularity": 0.85},
+    {"productCode": "SPRITE_M",      "productName": "中杯雪碧",            "category": "drink",     "priceYuan": 9.5,  "tags": ["sugar"],                              "popularity": 0.40},
+    {"productCode": "ICED_TEA_M",    "productName": "中杯冰红茶",          "category": "drink",     "priceYuan": 9.5,  "tags": ["caffeine", "sugar"],                  "popularity": 0.40},
+    {"productCode": "ORANGE_JUICE",  "productName": "中杯橙汁",            "category": "drink",     "priceYuan": 12.0, "tags": ["sugar"],                              "popularity": 0.35},
+    {"productCode": "MILK",          "productName": "纯牛奶",              "category": "drink",     "priceYuan": 7.0,  "tags": ["dairy"],                              "popularity": 0.40},
+    {"productCode": "COFFEE",        "productName": "鲜煮咖啡",            "category": "drink",     "priceYuan": 10.0, "tags": ["caffeine"],                           "popularity": 0.55},
+    {"productCode": "LATTE",         "productName": "拿铁（中杯）",        "category": "drink",     "priceYuan": 15.0, "tags": ["dairy", "caffeine"],                  "popularity": 0.50},
+    {"productCode": "WATER",         "productName": "纯水",                "category": "drink",     "priceYuan": 6.0,  "tags": [],                                     "popularity": 0.30},
+    {"productCode": "SOYMILK",       "productName": "豆浆",                "category": "drink",     "priceYuan": 8.0,  "tags": ["soy"],                                "popularity": 0.30},
+    {"productCode": "SUNDAE",        "productName": "新地（巧克力）",      "category": "dessert",   "priceYuan": 9.5,  "tags": ["dairy", "sugar"],                     "popularity": 0.60},
+    {"productCode": "MCFLURRY",      "productName": "奥利奥麦旋风",        "category": "dessert",   "priceYuan": 13.0, "tags": ["dairy", "sugar", "gluten"],           "popularity": 0.65},
+    {"productCode": "PIE_TARO",      "productName": "香芋派",              "category": "dessert",   "priceYuan": 7.5,  "tags": ["gluten", "sugar", "fried"],           "popularity": 0.50},
+    {"productCode": "PIE_PINEAPPLE", "productName": "菠萝派",              "category": "dessert",   "priceYuan": 7.5,  "tags": ["gluten", "sugar", "fried"],           "popularity": 0.40},
+    {"productCode": "CONE",          "productName": "圆筒冰淇淋",          "category": "dessert",   "priceYuan": 4.0,  "tags": ["dairy", "sugar", "gluten"],           "popularity": 0.60},
+    {"productCode": "MUFFIN_EGG",    "productName": "吉士蛋麦满分",        "category": "breakfast", "priceYuan": 12.0, "tags": ["egg", "gluten", "dairy"],             "popularity": 0.50},
+    {"productCode": "MUFFIN_SAUSAGE","productName": "猪柳蛋麦满分",        "category": "breakfast", "priceYuan": 15.5, "tags": ["pork", "egg", "gluten", "dairy"],     "popularity": 0.60},
+    {"productCode": "MUFFIN_BACON",  "productName": "烟肉蛋麦满分",        "category": "breakfast", "priceYuan": 15.0, "tags": ["pork", "egg", "gluten"],              "popularity": 0.40},
+    {"productCode": "HOTCAKE",       "productName": "热香饼",              "category": "breakfast", "priceYuan": 14.0, "tags": ["gluten", "dairy", "egg", "sugar"],    "popularity": 0.35},
+    {"productCode": "HAPPY_MEAL",    "productName": "开心乐园餐",          "category": "kids",      "priceYuan": 29.0, "tags": ["chicken", "gluten", "dairy"],         "popularity": 0.50}
+  ],
+  "coupons": [
+    {"couponCode": "CP_FULL60_8", "title": "满 ¥60 减 ¥8",     "kind": "orderThreshold", "thresholdYuan": 60.0, "discountYuan": 8.0, "note": "整单满减，按门店实时可用券为准"},
+    {"couponCode": "CP_FULL99_15","title": "满 ¥99 减 ¥15",    "kind": "orderThreshold", "thresholdYuan": 99.0, "discountYuan": 15.0,"note": "整单满减，按门店实时可用券为准"},
+    {"couponCode": "CP_FRIES_HALF","title": "中薯条半价",      "kind": "itemDiscount",   "itemCode": "FRIES_M",   "discountYuan": 5.75, "note": "单品券，是否可与满减叠加以券面规则为准"}
+  ]
+}
