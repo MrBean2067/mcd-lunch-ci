@@ -9,25 +9,43 @@
 - [ ] `MCP_INTEGRATION.md` 存在
 - [ ] 源代码可运行：`python -m mcd_lunch_ci demo` 能跑出结果
 - [ ] `workbuddy.md` 存在（换 3000 WorkBuddy 积分用）
+- [ ] `skill/mcd-lunch-ci/SKILL.md` 存在（对应活动「开发 Skill」的要求，可选但强烈建议）
 - [ ] 仓库里**没有任何真实 Token**（搜一遍 `Bearer`、`MCD_MCP_TOKEN=`）
 - [ ] 仓库是 **Public**
 - [ ] 仓库创建时间在 2025-12-25 00:00 之后（新建仓库天然满足）
+- [ ] README 里的 `<you>` 占位符已替换成真实用户名
 
 ## 二、推到 GitHub
 
+本地仓库**已经初始化并提交好了**（`git log` 能看到一条提交，37 个文件，`.env` 已被排除）。你只需要建远程仓库然后推：
+
 ```bash
 cd mcd-lunch-ci
-git init
-git add .
-git commit -m "feat: 午餐流水线 mcd-lunch-ci — 把「今天吃什么」变成一条 CI 流水线"
 
-# 在 GitHub 网页新建一个 Public 仓库（名字建议 mcd-lunch-ci，不要初始化 README）
-git branch -M main
+# 1) 在 GitHub 网页新建一个 Public 仓库，名字建议 mcd-lunch-ci
+#    重点：不要勾选 "Add a README file"、不要加 .gitignore、不要选 license
+#    否则远程会有一条提交，push 会被拒
+
+# 2) 把下面的 <你的用户名> 换成实际用户名
 git remote add origin https://github.com/<你的用户名>/mcd-lunch-ci.git
 git push -u origin main
 ```
 
-推完确认三件事：仓库能匿名打开、README 顶部的 hero 图能正常显示、`docs/hero.svg` 路径没写错。
+如果 push 被拒（`rejected - fetch first`），说明建仓库时勾了初始化文件，用：
+
+```bash
+git pull --rebase origin main
+git push -u origin main
+```
+
+推完确认三件事：仓库能**匿名打开**（退出登录或用无痕窗口）、README 顶部 hero 图正常显示、`docs/hero.svg` 路径没写错。
+
+最后把 README 里两处占位符替换成你的真实仓库地址（否则首屏的 clone 命令是错的）：
+
+```bash
+# 第 22 行左右
+git clone https://github.com/<you>/mcd-lunch-ci.git
+```
 
 ## 三、发报名 Issue
 
@@ -41,7 +59,7 @@ git push -u origin main
 把下面这条**整段复制**，替换成你的仓库地址即可（直接一行，别按回车）：
 
 ```
-【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/<你的用户名>/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价领券后，默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少」，并给出预算—满意度前沿曲线。零第三方依赖，无 Token 也能跑通全流程。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
+【参赛申请】项目名称：午餐流水线 mcd-lunch-ci项目地址：https://github.com/<你的用户名>/mcd-lunch-ci项目简介：把团队点午餐从群聊拉锯变成一条 7 阶段 CI 流水线：每个人写清预算、忌口、热量上限，求解器用帕累托前沿 + 整数背包 DP 给出在总预算内社会福利最优的方案，调 MCP 核价后默认只出预览、加 --confirm 才下单。报告会说清「谁妥协了、差多少钱」，并给出预算—满意度前沿。忌口/热量/预算是代码里的硬过滤，模型无权放行过敏原；无 Token 也能跑通全流程。同时打包为可直接安装的 WorkBuddy Skill（skill/mcd-lunch-ci/SKILL.md）。基于麦当劳 MCP：query-nearby-stores、query-meals、query-meal-detail、list-nutrition-foods、query-store-coupons、calculate-price、create-order。
 ```
 
 Issue 标题可以写：`【参赛申请】午餐流水线 mcd-lunch-ci`
@@ -50,7 +68,7 @@ Issue 标题可以写：`【参赛申请】午餐流水线 mcd-lunch-ci`
 
 ## 四、拉 Star（这一步不做，前面都白做）
 
-排名只看 Star 数，且**第 100 名门槛已经是 44 星**。发布后 24 小时是关键窗口：
+排名只看 Star 数，**Star 为 0 连榜都进不去**，且第 100 名门槛已经是 44 星。发布后 24 小时是关键窗口：
 
 1. **标题里带具体数字**比任何形容词都有效。参考：`8 个人点午饭吵了 20 分钟，我把它做成了一条 CI 流水线`
 2. 首屏必须有能一眼看懂的产物：README 里的 hero 图和终端输出已经是这个作用，别删。

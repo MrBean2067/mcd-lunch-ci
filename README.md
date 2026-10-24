@@ -251,6 +251,30 @@ python -m mcd_lunch_ci run --team team.json --offline
 
 ---
 
+## 作为 WorkBuddy Skill 使用
+
+除了命令行，这个项目也打包成了一个可直接安装的 WorkBuddy Skill——因为团队点餐的真实入口是聊天框，不是终端。
+
+```bash
+# 复制到你的 WorkBuddy 技能目录
+cp -r skill/mcd-lunch-ci ~/.workbuddy/skills/
+```
+
+之后在对话里直接说人话就行：
+
+> 「我们部门 6 个人中午一起点麦当劳，人均 25 以内，有人不吃辣、有人减脂要控在 600 大卡以内」
+
+Skill 会自己完成：抽取每人的约束 → 缺的字段反问你 → 写 `team.json` → 跑求解 → 用中文讲清方案、谁妥协了、加预算值不值 → **停下来等你确认**才下单。
+
+`skill/mcd-lunch-ci/SKILL.md` 里写死了几条护栏，不是靠模型自觉：
+
+- 忌口标签只接受固定词表（`beef`/`pork`/`dairy`/`spicy`…），中文会被判为无法识别，逼着把话说准；
+- `--confirm` **默认永远不加**，必须用户看过方案再明确同意；
+- 热量显示「未知」时必须原样说「官方没提供营养数据」，不能讲成「很低」；
+- 无解时按诊断给出的最小可行金额去跟用户谈，**不许自行放宽忌口或热量上限**。
+
+---
+
 ## 目录结构
 
 ```
@@ -269,6 +293,7 @@ mcd-lunch-ci/
 │   └── cli.py         # demo / sync / run / doctor / tally
 ├── data/              # 快照：live_menu_snapshot.json（真实同步）+ menu_snapshot.json（样例）
 ├── examples/team.json # 8 人示例团队
+├── skill/mcd-lunch-ci/SKILL.md  # 可直接装进 WorkBuddy 的 Skill 包
 ├── tests/             # 40 个单元测试
 ├── docs/              # hero 图、MCP_FIELD_MAP.md（实测字段表）、提交说明
 ├── action.yml
